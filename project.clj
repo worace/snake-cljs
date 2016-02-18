@@ -35,7 +35,8 @@
                ;; lein cljsbuild once min
                {:id "min"
                 :source-paths ["src"]
-                :compiler {:output-to "resources/public/js/compiled/snake.js"
+                :compiler {
+                           :output-to "resources/public/js/snake.js"
                            :main snake.core
                            :optimizations :advanced
                            :pretty-print false}}]}
