@@ -73,16 +73,8 @@
   (if (food-collision? (:food @app-state)
                        (:snake @app-state))
     (do
-
       (swap! app-state assoc :food (new-food))
-      (swap! app-state update-in [:snake] grow)
-
-      (println "********************")
-       (println "********************")
-       (println " OM NOM NOM NBOM")
-       (println "********************")
-       (println "********************"))
-    )
+      (swap! app-state update-in [:snake] grow))
 
 
   (let [current-dir (:dir @app-state)
